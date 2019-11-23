@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const expressJwt = require("express-jwt");
 const engines = require('consolidate');
 const path = require('path')
+// var cookieParser = require('cookie-parser')
 
 require("dotenv").config();
 
@@ -27,7 +28,7 @@ app.get("/", (req, res) => {
   res.render("login")
 });
 app.get("/home",(req,res)=>{
-  res.render("home")
+  res.render("login")
 })
 app.use("/login", authRouter);
 app.use("/users", jwtCheck, userRouter);

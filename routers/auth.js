@@ -10,9 +10,9 @@ const adminCredentials = {
 authRouter
   .route("/")
   .get((req, res) => {
-    res.send("You are in login page");
+    // res.send("You are in login page");
     
-    // res.render("login")
+    res.render("login")
   })
   .post((req, res) => {
     // console.log(req.body)
